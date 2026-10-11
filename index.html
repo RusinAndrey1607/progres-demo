@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#ffffff" />
+  <title>Ozon Progress Demo</title>
+
+  <link rel="stylesheet" href="./src/components/progress/progress.css" />
+  <link rel="stylesheet" href="./styles/main.css" />
+
+  <script type="module" src="./src/app.js"></script>
+</head>
+
+<body>
+  <main class="app">
+    <div class="container">
+      <header class="app__header">
+        <h1 class="app__title">Progress</h1>
+      </header>
+
+      <section class="workspace">
+        <div class="workspace__preview">
+          <div class="progress" id="progress" role="img" aria-label="Прогресс: 50%">
+            <svg class="progress__svg" viewBox="0 0 120 120" aria-hidden="true">
+              <circle class="progress__track" cx="60" cy="60" r="52" />
+              <circle class="progress__arc" cx="60" cy="60" r="52" />
+            </svg>
+          </div>
+        </div>
+
+        <form class="controls" id="controls">
+
+          <div class="control control--value">
+            <input class="control__input" id="value" type="number" min="0" max="100" step="1" value="50" />
+            <label class="control__label" for="value">Value</label>
+
+          </div>
+
+          <label class="control control--toggle" for="animate">
+            <input class="toggle__input" id="animate" type="checkbox" />
+            <span class="toggle" aria-hidden="true"></span>
+            <span class="control__label">Animate</span>
+
+          </label>
+
+          <label class="control control--toggle" for="hide">
+            <input class="toggle__input" id="hide" type="checkbox" />
+            <span class="toggle" aria-hidden="true"></span>
+            <span class="control__label">Hide</span>
+          </label>
+
+        </form>
+      </section>
+          <p class="controls__error" id="value-error"></p>
+
+    </div>
+
+  </main>
+</body>
+
+</html>
